@@ -31,7 +31,16 @@ const Base = ({ addBase, pizza }) => {
           className="next"
         >
           <Link to="/toppings">
-            <button>Next</button>
+            <motion.button // while hover gets the same key value pairs as animate!
+              whileHover={{
+                scale: 1.1,
+                // give it a white glowing effect
+                textShadow: "0px 0px 8px white",
+                boxShadow: "0px 0px 8px white",
+              }}
+            >
+              Next
+            </motion.button>
           </Link>
         </motion.div>
       )}
