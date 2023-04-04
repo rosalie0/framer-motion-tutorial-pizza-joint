@@ -11,7 +11,17 @@ const Home = () => {
     >
       <h2>Welcome to Pizza Joint</h2>
       <Link to="/base">
-        <motion.button animate={{}}>Create Your Pizza</motion.button>
+        <motion.button
+          // while hover gets the same key value pairs as animate!
+          whileHover={{
+            scale: 1.1,
+            // give it a white glowing effect
+            textShadow: "0px 0px 8px white",
+            boxShadow: "0px 0px 8px white",
+          }}
+        >
+          Create Your Pizza
+        </motion.button>
       </Link>
     </motion.div>
   );
