@@ -25,7 +25,7 @@ const Toppings = ({ addTopping, pizza }) => {
                 // when you use scale you need to think about the transform origin.
                 // for this one we need to specify its X origin as 0.
                 originX: 0,
-                color: "yellow",
+                color: "rgb(255,255,0)",
               }}
               transition={{ type: "spring", stiffness: 300 }}
               key={topping}
