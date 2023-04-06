@@ -12,6 +12,8 @@ const containerVariants = {
   visible: {
     opacity: 1, // visible,
     x: 0, // default x position
+    // Transition object:
+    transition: { type: "spring", delay: 0.5 },
   },
 };
 const Base = ({ addBase, pizza }) => {
@@ -20,9 +22,16 @@ const Base = ({ addBase, pizza }) => {
   return (
     <motion.div
       className="base container"
-      initial={{ x: "100vw" }}
-      animate={{ x: 0 }}
-      transition={{ type: "spring", delay: 0.5 }}
+      // VERSION WITHOUT VARIANTS -->
+      // initial={{ x: "100vw" }}
+      // animate={{ x: 0 }}
+      // transition={{ type: "spring", delay: 0.5 }}
+      //
+      // VERSION USING VARIANTS -->
+      variants={containerVariants}
+      initial="hidden" // Just give it the key for the animation as described in your variants obj
+      animate="visible" // Same as above.
+      // no need to do transition={} because it's typed in animate already.
     >
       <h3>Step 1: Choose Your Base</h3>
       <ul>
