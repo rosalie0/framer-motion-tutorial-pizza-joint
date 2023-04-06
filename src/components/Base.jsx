@@ -1,6 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+
+const containerVariants = {
+  // You can call these keys whatever makes sense to you.
+  // EG Initial, hidden, etc...
+  hidden: {
+    opacity: 0, // invisible,
+    x: "100vw", // off screen Right
+  },
+  visible: {
+    opacity: 1, // visible,
+    x: 0, // default x position
+  },
+};
 const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
 
